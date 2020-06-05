@@ -85,8 +85,7 @@ public class Cliencontoller {
 	}
 	@GetMapping("/addabsence")
 	public ModelAndView getAbsence(@RequestParam String cin){
-		messanger.sendMessage();
-		
+		//messanger.sendMessage();
 	    Map<String,Object> model =new HashMap<String, Object>();
 	    Absence absence =new Absence();
 	    absence.setCin(cin);
@@ -118,8 +117,6 @@ public class Cliencontoller {
 		RedirectView redirectView =new RedirectView();
 		redirectView.setUrl("/");
 		return new ModelAndView(redirectView);}
-	
-	
-	
+
 
 }

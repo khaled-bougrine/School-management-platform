@@ -3,7 +3,7 @@ package com.projet_S2.clienEtudient.clienFeign;
 
 import java.util.List;
 
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
+//import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +16,7 @@ import com.projet_S2.clienEtudient.model.Etudient;
 import com.projet_S2.clienEtudient.model.Remarque;
 
 @FeignClient(name="microservice-apigatway")
-@RibbonClient("microservice-etudient microservice-remarques microservice-absence")
+//@RibbonClient("microservice-etudient microservice-remarques microservice-absence")
 public interface FeignEtudientClien {
 	
 	@GetMapping("microservice-etudient/etudient/{cin}")
