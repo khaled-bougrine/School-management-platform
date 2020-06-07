@@ -68,7 +68,7 @@ public class Cliencontoller {
 	}
 	@GetMapping("/getremarque")
 	public ModelAndView getRemarque(@RequestParam String cin){
-		messanger.sendMessage();
+		//messanger.sendMessage();
 	    Map<String,Object> model =new HashMap<String, Object>();
 	    model.put("etudient",etudientService.etudientparcin(cin));
 	    Remarque remarque = new Remarque();
