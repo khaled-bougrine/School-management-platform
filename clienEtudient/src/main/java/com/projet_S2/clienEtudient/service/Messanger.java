@@ -13,8 +13,8 @@ public class Messanger {
 
 
     // Find your Account Sid and Token at twilio.com/user/account
-    public static final String ACCOUNT_SID = "ACdb3e3ccd1216d379446c86c178f54872";
-    public static final String AUTH_TOKEN = "e21bff790cc215587a178ce7565d0c1a";
+     public static final String ACCOUNT_SID =  System.getenv("TWILIO_ACCOUNT_SID");
+    public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
 
     public void sendMessage() {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
